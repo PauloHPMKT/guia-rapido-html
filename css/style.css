@@ -1,0 +1,331 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    background-image: url(../images/bg-devmais.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.header {
+    padding: 10px 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header img {
+    width: 180px;
+}
+
+.header .navigation,
+.header .navigation .social-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header .navigation .social-menu li {
+    padding: 15px;
+}
+
+.header .navigation a {
+    padding: 10px 13px;
+    font-size: 27px;
+    color: #070ba6;
+    transition: .4s ease;
+}
+
+.header .navigation a:hover {
+    color: #F57900;
+}
+
+.container {
+    max-width: 1280px;
+    height: 80vh;
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+.container section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: appear 3000ms ease;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container .ebook-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container .ebook-container img {
+    width: 400px;
+    padding-left: 30px;
+    filter: drop-shadow(-2px 2px 20px rgba(0, 0, 0, 0.193));
+}
+
+.container .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .content h1 {
+    font-size: 50px;
+    color: #2E3092;
+    font-weight: 500;
+}
+
+.container .content h2 {
+    font-size: 33px;
+    font-weight: 500;
+    margin: 15px 0;
+    color: #F57900;
+}
+
+.container .content p {
+    font-size: 18px;
+    color: rgb(82, 82, 82);
+}
+
+.container .content button {
+    width: 250px;
+    height: 55px;
+    font-size: 17px;
+    margin-top: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    transition: .4s ease;
+    color: #fff;
+    font-weight: 600;
+    background-color: #070ba6;
+}
+
+.container .content button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.442);
+    background-color: #2E3092;
+}
+
+.container .form-toast {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: #f57b0036;
+    width: 100vw;
+    height: 100%;
+    padding-top: 220px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .8s ease;
+}
+
+.formContainer{
+    width: 500px;
+    height: 285px;
+    background-color: #070ba6;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.formContainer h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+.mb{ /*margin-bottom*/
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+input, select{ /*personalizar estylo que servirá para os dois campos*/
+    width: 100%;
+    box-sizing: border-box; /*corrigir e alinhar o tamanho das caixas*/
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]{/*[] - utiliza-se chaves quando quer colocar um estilo para um seletor especifíco*/
+    color: white;
+    background-color: #F57900;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: normal;
+    cursor: pointer;
+} 
+
+.footer{
+    background-color: #070ba6;
+    color: #fff;
+}
+
+.footer a {
+    color: #fff;
+}
+.footer .container-footer {
+    display: flex;
+    padding: 50px 150px;
+}
+
+.footer .developer {
+    border-top: 1px solid #F57900;
+    padding: 50px;
+    text-align: center;
+}
+
+.footer .description {
+    width: 50%;
+    padding-right: 50px;
+    text-align: justify;
+}
+
+.footer .description h3 {
+    margin: 25px 0 10px;
+}
+
+.footer .description .social-menu {
+    display: flex;
+}
+
+.footer .description .social-menu a {
+    padding: 30px;
+    font-size: 30px;
+    transition: .4s ease;
+}
+
+.footer .description .social-menu a:hover {
+    color: #F57900;
+}
+
+.form-toast.open {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/*media queries*/
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 85%;
+    }
+
+    .container .content h1 {
+        font-size: 40px;
+    }
+
+    .footer .container-footer {
+        padding: 40px;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .footer .container-footer .description {
+        width: 100%;
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .header {
+        padding: 10px 30px;
+    }
+
+    .header img {
+        width: 120px;
+    }
+
+    .header .navigation .social-menu a {
+        padding: 5px;
+    }
+
+    .container .ebook-container img {
+        width: 300px;
+        padding: 0;
+        filter: drop-shadow(-2px 0 5px rgba(0, 0, 0, 0.189));
+    } 
+    .container .content h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .container {
+        height: auto;
+    }
+    .container section {
+        flex-direction: column;
+    }
+
+    .container .ebook-container,
+    .container .content {
+        width: 100%;
+    }
+
+    .container .content {
+        padding: 50px 0;
+    }
+} 
+
+@media (max-width: 485px) {
+    .container .content h1 {
+        font-size: 37px;
+    }
+
+    .container .content h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 485px) {
+    .formContainer {
+        height: 350px;
+    }
+
+    .formContainer h2 {
+        font-size: 26px;
+    }
+}
